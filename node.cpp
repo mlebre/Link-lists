@@ -1,32 +1,33 @@
+#include "node.h"
 #include <cstdio>
 #include <cstdlib>
-#include "node.h"
 #include "image.h"
 
-//---------------------------------------------------------
-//                    Constructors
-//---------------------------------------------------------
-node::node(void)
+//-------------------------------------------------------------------
+//                              Constructors
+//-------------------------------------------------------------------
+
+node::node(void) 
 {
-	next=NULL;  
-    data=NULL;
+  next=NULL;
+  photo=NULL;
+  essai=6;
 }
 
-/*node::node(const node& model)
+node::node(image *model)
 {
-    next=model.Get_next();
-    data=model.Get_data();
-
-}*/
-
-//---------------------------------------------------------
-//                    Methods
-//---------------------------------------------------------
-int * node::Get_next(void)
-{
-  return next;
+  Set_height(model->Get_height(), photo);
+  Set_width(model->Get_width(), photo);
+  Set_pix(model->Get_pix(), photo);
 }
-u_char * node::Get_data(void)
+
+
+//-------------------------------------------------------------------
+//                              Getters
+//-------------------------------------------------------------------
+int node::Get_essai(void)
 {
-  return data;
-} 
+  return essai;
+}
+
+
