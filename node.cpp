@@ -52,4 +52,10 @@ int node::Get_photo_height(image* ref)
   return a;
 }
 
-
+//-------------------------------------------------------------------
+//                              Setters
+//-------------------------------------------------------------------
+void node::Set_photo(image* adress)
+{
+  photo=adress;
+}

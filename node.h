@@ -1,5 +1,5 @@
-//#ifndef __IMAGE_H__
-//#define __IMAGE_H__
+#ifndef __NODE_H__
+#define __NODE_H__
 
 //-------------------------------------------------------------------
 #include <cstdio>
@@ -37,6 +37,10 @@ class node
     image* Get_photo(void);
     int Get_photo_height(image* ref); 
 
+//-------------------------------------------------------------------
+//                         Public Setters
+//-------------------------------------------------------------------
+    void Set_photo(image* adress);
 };
 
-//#endif
+#endif
