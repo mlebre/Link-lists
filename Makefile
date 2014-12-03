@@ -1,6 +1,6 @@
 all:a.out
 a.out: main.cpp image.o  node.o link_list.o
-	g++ -o a.out -Wall main.cpp node.o image.o
+	g++ -o a.out -Wall main.cpp node.o image.o link_list.o
 
 link_list.o:image.o node.o link_list.cpp link_list.h
 	g++ -o link_list.o -c link_list.cpp
