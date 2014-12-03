@@ -19,12 +19,16 @@ int main(int argc, char const *argv[])
   node one=node();
   image* point=&testo;
 //  Set_photo(point);
-  printf("%p\n", point);
-  printf("%p\n", &testo);
+//  printf("%p\n", point);
+ // printf("%p\n", &testo);
 
 //Call to the copy constructor  
   node *two= new node ();
   new node(testo, two); // we can't test this method
+
+//Use the link_list class
+  link_list trying=link_list();
+  printf("%d\n", trying.nb_elements);
 
   return 0;
 }
