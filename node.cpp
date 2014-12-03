@@ -14,20 +14,42 @@ node::node(void)
   essai=6;
 }
 
-node::node(image *model)
+//A sort of a copy constructor
+node::node(const image& model, node *ref)
 {
-  Set_height(model->Get_height(), photo);
-  Set_width(model->Get_width(), photo);
-  Set_pix(model->Get_pix(), photo);
+  ref=new node();
+  ref->photo=new image(model);
 }
 
+//-------------------------------------------------------------------
+//                              Destructors
+//-------------------------------------------------------------------
+node::~node(void)
+{
+	delete [] next;
+	delete [] photo;
+	next=NULL;
+}
 
 //-------------------------------------------------------------------
 //                              Getters
 //-------------------------------------------------------------------
-int node::Get_essai(void)
+int node::Get_essai(void)  
 {
   return essai;
+}
+
+image* node::Get_photo(void)  
+{
+  return photo;
+}
+
+//Use to see the parameters include the node
+int node::Get_photo_height(image* ref) 
+{
+  int a=ref->Get_height();
+  printf("'%d\n", a);
+  return a;
 }
 
 

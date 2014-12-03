@@ -1,4 +1,4 @@
-#ifndef __IMAGE_H__  // si character.h is not defined already, take everything until to #endif
+#ifndef __IMAGE_H__
 #define __IMAGE_H__
 
 class image
@@ -22,22 +22,21 @@ class image
 //=============================================================
 //                        Destructors  
 //=============================================================  
-  //  ~image(void);
+   ~image(void);
 //=============================================================
 //                        Getters 	
 //=============================================================  
     int Get_height(void) const;
     int Get_width(void) const;
-    unsigned char Get_pix(void) const;
+    unsigned char * Get_pix(void) const;
 
 //=============================================================
 //                        Setters   
-//============================================================= 
-    void Set_height(const int number, image& neo);
-    void Set_width(const int number, image& neo);
-    void Set_pix(const unsigned char *tab, image& neo);
-
-
+//=============================================================   
+/*    void Set_height(int number, image *model);
+    void Set_width(int number, image *model);
+    void Set_pix(unsigned char * tab, image *model);
+*/
 //=============================================================
 //                        Methods 	
 //=============================================================  
@@ -48,4 +47,5 @@ class image
 
 
 };
+
 #endif

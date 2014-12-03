@@ -5,12 +5,17 @@
 
 
 //Work about the link lists
+
 int main(int argc, char const *argv[])
 {
-	image testo;
-	node one;
-	printf("%d, %d \n",one.Get_essai(), testo.Get_height());
+//-------------------------------------------------------------------
+// Creation of an image wich we place into a node.	
+//-------------------------------------------------------------------
+  image testo=image();
+  char name[]="gargouille.ppm";
+  testo.ppm_read_from_file(name);
+  node *two= new node ();
+  new node(testo, two); // we can't test this methods
 
-
-	return 0;
+  return 0;
 }

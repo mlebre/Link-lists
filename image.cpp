@@ -31,11 +31,11 @@ image::image(const image& model)
 //===========================================================================================
 //                                     Destructors 
 //===========================================================================================
-//image::~image(void)
-//{
-  //delete [] pix;
-  //pix=NULL;
-//}
+image::~image(void)
+{
+  delete [] pix;
+  pix=NULL;
+}
 
 
 //===========================================================================================
@@ -58,24 +58,26 @@ u_char * image::Get_pix(void) const
   return pix;
 }
 
+
 //===========================================================================================
 //                                     Setters 
 //===========================================================================================
 
-void image::Set_height(const int number, image & neo)
+/*void image::Set_height(int number, image * model)
 {
-  neo.height=number;
+  model->height=number;
 }
 
-void image::Set_widht(const int number, image & neo)
+void image::Set_width(int number, image * model)
 {
-  neo.width=number;
+  model->width=number;
 }
 
-void image::Set_pix(const u_char tab, image & neo)
+void image::Set_pix(u_char *tab, image * model)
 {
-  neo.pix=tab;
+  model->pix=tab;
 }
+*/
 
 
 //===========================================================================================

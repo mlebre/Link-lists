@@ -2,7 +2,6 @@
 //#define __IMAGE_H__
 
 //-------------------------------------------------------------------
-
 #include <cstdio>
 #include <cstdlib>
 #include "image.h"
@@ -23,12 +22,20 @@ class node
 //                         Public constructors
 //-------------------------------------------------------------------
     node(void);
-    node(image *model); //subsitute of the copy constructor
+    node(const image& model, node *ref); //subsitute of the copy constructor
 
 //-------------------------------------------------------------------
-//                         Public methods
+//                         Public destructors
 //-------------------------------------------------------------------
-    int Get_essai(void);
+    ~node(void);
+
+
+//-------------------------------------------------------------------
+//                         Public Getters
+//-------------------------------------------------------------------
+    int Get_essai(void); 
+    image* Get_photo(void);
+    int Get_photo_height(image* ref); 
 
 };
 
