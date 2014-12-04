@@ -6,6 +6,7 @@
 
 //Work about the link lists
 
+
 int main(int argc, char const *argv[])
 {
 //-------------------------------------------------------------------
@@ -14,21 +15,25 @@ int main(int argc, char const *argv[])
   image testo= image();
   char name[]="gargouille.ppm";
   testo.ppm_read_from_file(name);
-
 //Affection of the image's adress to the node.
-  node one=node();
-  image* point=&testo;
-//  Set_photo(point);
-//  printf("%p\n", point);
- // printf("%p\n", &testo);
+  node* one=new node();
+  one->Set_photo(&testo);
+  printf("%p\n", &testo);
+  printf("%p\n", one->Get_photo());
+  
+  delete one;
+//-------------------------------------------------------------------
+// Link_list  
+//-------------------------------------------------------------------
+/*  link_list trying=link_list();
+  node* first=new node();
+  node* second=new node();
+//Creation of a list with two nodes
+//  trying.Set_nb_elements(2);
+//  printf("%d\n", trying.Get_nb_elements());
 
-//Call to the copy constructor  
-  node *two= new node ();
-  new node(testo, two); // we can't test this method
-
-//Use the link_list class
-  link_list trying=link_list();
-  printf("%d\n", trying.nb_elements);
-
+  delete first;
+  delete second;
+*/
   return 0;
 }
