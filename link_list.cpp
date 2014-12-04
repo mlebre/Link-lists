@@ -5,7 +5,7 @@
 #include "link_list.h"
 
 //-------------------------------------------------------------------
-//                         Constructors
+//                         Constructors & Destructors
 //-------------------------------------------------------------------
 link_list::link_list(void)
 {
@@ -13,11 +13,24 @@ link_list::link_list(void)
   first=NULL;
 }
 
+link_list::~link_list(void)
+{
+}
 
 //-------------------------------------------------------------------
 //                         Methods
 //-------------------------------------------------------------------
-void link_list::append(node add)
+int link_list::Get_nb_elements(void)
 {
-  
+  return nb_elements;
+}
+
+void link_list::Set_nb_elements(int x)
+{
+  nb_elements=x;
+}
+//In main, the last node of this list call this method
+void link_list::append(node* add, node* last)
+{
+  last->Set_next(add);
 }

@@ -6,18 +6,23 @@
 
 class link_list
 {
-  public:
+  private:
     int nb_elements;
     node* first;
-    
+
+  public:
 //-------------------------------------------------------------------
-//                         Constructors
+//                    Constructors & Desructors
 //-------------------------------------------------------------------
     link_list(void);
+    ~link_list(void);
 //-------------------------------------------------------------------
 //                         Publics methods
 //-------------------------------------------------------------------
-    void append(node add);
+    int Get_nb_elements(void);
+    void Set_nb_elements(int x);
+    void append(node* add, node* last);
+
 };
 
 
