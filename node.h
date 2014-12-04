@@ -9,7 +9,7 @@
 
 class node
 {
-  private:
+  protected:
 //-------------------------------------------------------------------
 //                          Private attributs
 //-------------------------------------------------------------------
@@ -33,14 +33,18 @@ class node
 //-------------------------------------------------------------------
 //                         Public Getters
 //-------------------------------------------------------------------
-    int Get_essai(void); 
+    node* Get_next(void); 
     image* Get_photo(void);
+    int Get_essai(void);
     int Get_photo_height(image* ref); 
 
 //-------------------------------------------------------------------
 //                         Public Setters
 //-------------------------------------------------------------------
-    void Set_photo(image* adress);
+//    void Set_photo(image* adress);
+    void Set_next(node* add);
+    void Set_photo(image* obj);
+
 };
 
 #endif

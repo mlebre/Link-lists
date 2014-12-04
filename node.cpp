@@ -34,9 +34,9 @@ node::~node(void)
 //-------------------------------------------------------------------
 //                              Getters
 //-------------------------------------------------------------------
-int node::Get_essai(void)  
+node* node::Get_next(void)  
 {
-  return essai;
+  return next;
 }
 
 image* node::Get_photo(void)  
@@ -44,6 +44,10 @@ image* node::Get_photo(void)
   return photo;
 }
 
+int node::Get_essai(void)  
+{
+  return essai;
+}
 //Use to see the parameters include the node
 int node::Get_photo_height(image* ref) 
 {
@@ -55,7 +59,13 @@ int node::Get_photo_height(image* ref)
 //-------------------------------------------------------------------
 //                              Setters
 //-------------------------------------------------------------------
-void node::Set_photo(image* adress)
+void node::Set_next(node* add)  
 {
-  photo=adress;
+  next=add;
+}
+
+//Allow the affectation to photo the adress of the picture
+void node::Set_photo(image* obj)  
+{
+  photo=obj;
 }
